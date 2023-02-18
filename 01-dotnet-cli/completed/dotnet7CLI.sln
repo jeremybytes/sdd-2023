@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "person-api", "person-api\person-api.csproj", "{B25DA52D-9D5D-47E0-B707-679192C7C712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "person-api-tests", "person-api-tests\person-api-tests.csproj", "{2DE6723F-AA50-455A-8946-A9DE930A4B02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "person-console", "person-console\person-console.csproj", "{7C5588CC-4321-450A-9659-2745D58D930B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B25DA52D-9D5D-47E0-B707-679192C7C712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B25DA52D-9D5D-47E0-B707-679192C7C712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B25DA52D-9D5D-47E0-B707-679192C7C712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B25DA52D-9D5D-47E0-B707-679192C7C712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE6723F-AA50-455A-8946-A9DE930A4B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE6723F-AA50-455A-8946-A9DE930A4B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE6723F-AA50-455A-8946-A9DE930A4B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE6723F-AA50-455A-8946-A9DE930A4B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5588CC-4321-450A-9659-2745D58D930B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5588CC-4321-450A-9659-2745D58D930B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5588CC-4321-450A-9659-2745D58D930B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5588CC-4321-450A-9659-2745D58D930B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
