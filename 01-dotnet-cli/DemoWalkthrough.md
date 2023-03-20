@@ -1,7 +1,7 @@
 # Get Comfortable with .NET 7 and the CLI  
 Demo Walkthrough 
 
-By following this walkthrough, you can re-create the projects in this repository: [https://github.com/jeremybytes/dotnet70-cli](https://github.com/jeremybytes/dotnet70-cli).
+By following this walkthrough, you can re-create the projects in this repository: [https://github.com/jeremybytes/sdd-2023/tree/main/01-dotnet-cli](https://github.com/jeremybytes/sdd-2023/tree/main/01-dotnet-cli).
 
 **Level**: Introductory  
 
@@ -187,7 +187,7 @@ When this is not set (the default), API controllers are created. This may be wha
 * --use-program-main  
 This gives the options to turn off top-level statements. Personally, I am not a fan of top-level statements since real world applications are generally complex enough to require multiple files and classes, so I prefer to have a Program class as well.
 
-Let's create a new webapi project without https, controller APIs, and a program class:
+Let's create a new webapi project without https, with controller APIs, and with a program class:
 
 ```
 PS C:\dotnetCLI\person-api> dotnet new webapi --no-https --use-program-main
