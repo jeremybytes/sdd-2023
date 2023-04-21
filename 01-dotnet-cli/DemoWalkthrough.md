@@ -83,10 +83,10 @@ To see what version of .NET Core is installed, use "--version"
 
 ```
 PS C:\dotnetCLI> dotnet --version
-7.0.102
+7.0.202
 ```
 
-This walkthrough was built with version 3.0.100.
+This walkthrough was built with version 7.0.202.
 
 ## Web Service
 
@@ -332,7 +332,7 @@ public record Person(int Id, string GivenName, string FamilyName,
 *If the indentation is off when you paste in the code, use the keyboard shortcut "shift+alt+f" to format the file.*
 
 ### Adding a Data Provider
-The Person record is the data type that for the service. To supply some data, we will add a data provider. Add a new file to the PersonData folder named "HardCodedPeopleProvider.cs".
+The Person record is the data type that for the service. To supply some data, we will add a data provider. Add a new file to the Models folder named "HardCodedPeopleProvider.cs".
 
 As above, we will add the namespace plus the class declaration.
 
@@ -564,6 +564,8 @@ If we update the URL to use the new port, then we have the data that we expect.
 
 And that's our working service.
 
+> Be sure to shut down the service before continuing to the unit tests.
+
 ## Unit Tests
 
 Next we'll create a unit test project and add some tests for our code in the web service.
@@ -693,11 +695,12 @@ public class PeopleControllerTests
 }
 ```
 
-Note: you will can to use "ctrl+." to bring in the "using" statement for the PeopleController class.
+*Note: You can use "ctrl+." to bring in the "using" statement for the PeopleController class. You can do the same for the Person class* 
 
-Or you can manually add it to the top of the file:
+*Or you can manually add the namespaces to the top of the file:*
 
 ```csharp
+using person_api;
 using person_api.Controllers;
 ```
 
@@ -1446,9 +1449,9 @@ public class PeopleControllerTests
 We need a data provider to pass as a parameter to the PeopleController constructor. We could use a mocking framework. But to keep things easier for those who are not familiar with mocking, we will use a fake object.
 
 ### Adding a Fake Data Reader
-To create a fake data reader for testing, we will start with the HardCodedDataReader that we already have. This will save us a lot of typing.
+To create a fake data reader for testing, we will start with the HardCodedPeopleProvider that we already have. This will save us a lot of typing.
 
-Copy the "HardCodedDataReader.cs" file from the web service project folder into the unit test project folder.
+Copy the "HardCodedPeopleProvider.cs" file from the web service project folder into the unit test project folder.
 
 After copying the file, rename it to "FakePeopleProvider.cs".
 
