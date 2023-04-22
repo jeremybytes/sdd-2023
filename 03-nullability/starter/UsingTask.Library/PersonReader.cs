@@ -24,7 +24,7 @@ public class PersonReader
             throw new HttpRequestException($"Unable to complete request: status code {response.StatusCode}");
 
         var stringResult =
-            await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            await response.Content.ReadAsStringAsync(cancelToken).ConfigureAwait(false);
         var result = JsonSerializer.Deserialize<List<Person>>(stringResult, options);
 
         return result;

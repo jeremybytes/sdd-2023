@@ -86,7 +86,7 @@ public partial class MainWindow : Window
         PersonListBox.Items.Clear();
     }
 
-    private void Log(Exception ex)
+    private static void Log(Exception ex)
     {
         // NOTE: This is for example purposes only
         // It is generally a bad idea to show a raw exception
