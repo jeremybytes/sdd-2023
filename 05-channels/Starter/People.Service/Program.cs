@@ -1,8 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureKestrel(options => options.ListenLocalhost(9874));
-
 // Add services to the container.
+builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.WriteIndented = true);
 builder.Services.AddSingleton<IPeopleProvider, HardCodedPeopleProvider>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -21,7 +20,7 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/people", async (IPeopleProvider provider) =>
     {
         await Task.Delay(3000);
-        provider.GetPeople();
+        return provider.GetPeople();
     })
     .WithName("GetPeople");
 

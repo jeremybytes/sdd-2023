@@ -39,21 +39,7 @@ class Program
     // Option 2
     static async Task RunWithContinuation(List<int> ids)
     {
-        var allTasks = new List<Task>();
-
-        foreach (var id in ids)
-        {
-            Task<Person> currentTask = PersonReader.GetPersonAsync(id);
-
-            Task continuation = currentTask.ContinueWith(t =>
-            {
-                var person = t.Result;
-                DisplayPerson(person);
-            });
-
-            allTasks.Add(continuation);
-        }
-        await Task.WhenAll(allTasks);
+        await Task.Delay(1);
     }
 
     // Option 3
