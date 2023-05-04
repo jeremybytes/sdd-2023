@@ -7,4 +7,12 @@ New projects in C# have nullable reference types enabled by default. This helps 
 * Slides: [SLIDES-nullability.pdf](./SLIDES-nullability.pdf)  
 * Completed Code: [/completed](./completed/)
 
+
+## Article Series
+
+* [Nullability in C# - What It Is and What It Is Not](https://jeremybytes.blogspot.com/2022/07/nullability-in-c-what-it-is-and-what-it.html)  
+* [Null Conditional Operators in C# - ?. and ?[]](https://jeremybytes.blogspot.com/2022/07/null-conditional-operators-in-c-and.html)  
+* [Null Forgiving Operator in C# - !](https://jeremybytes.blogspot.com/2022/07/null-forgiving-operator-in-c.html)  
+* [Null Coalescing Operators in C# - ?? and ??=](https://jeremybytes.blogspot.com/2022/07/null-coalescing-operators-in-c-and.html)  
+* [C# "var" with a Reference Type is Always Nullable](https://jeremybytes.blogspot.com/2023/02/c-var-with-reference-types-is-always.html)  
 ---
