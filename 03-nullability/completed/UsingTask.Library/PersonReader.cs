@@ -3,7 +3,7 @@ using UsingTask.Shared;
 
 namespace UsingTask.Library;
 
-public class PersonReader
+public class PersonReader : IPersonReader
 {
     private readonly HttpClient client = new() { BaseAddress = new Uri("http://localhost:9874") };
     private readonly JsonSerializerOptions options = new() { PropertyNameCaseInsensitive = true };

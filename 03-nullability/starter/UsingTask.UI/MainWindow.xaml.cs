@@ -6,8 +6,8 @@ namespace UsingTask.UI;
 
 public partial class MainWindow : Window
 {
-    private PersonReader reader;
-    public PersonReader Reader
+    private IPersonReader reader;
+    public IPersonReader Reader
     {
         get => reader;
         set => reader = value;
