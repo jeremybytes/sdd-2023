@@ -15,4 +15,8 @@ New projects in C# have nullable reference types enabled by default. This helps 
 * [Null Forgiving Operator in C# - !](https://jeremybytes.blogspot.com/2022/07/null-forgiving-operator-in-c.html)  
 * [Null Coalescing Operators in C# - ?? and ??=](https://jeremybytes.blogspot.com/2022/07/null-coalescing-operators-in-c-and.html)  
 * [C# "var" with a Reference Type is Always Nullable](https://jeremybytes.blogspot.com/2023/02/c-var-with-reference-types-is-always.html)  
+
+## Resources  
+* [Nullable Contexts](https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-contexts) - Microsoft Learn  
+* [Implicitly Types Local Variables (i.e., var)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/declarations#implicitly-typed-local-variables) - Microsoft Learn  
 ---
