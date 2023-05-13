@@ -585,10 +585,10 @@ PS C:\dotnetCLI> cd .\person-api-tests\
 PS C:\dotnetCLI\person-api-tests>
 ```
 
-If we type "dotnet new list", we can see several unit test project options in the list.
+"dotnet new list" allows us to add a "tag" filter so that we can see only certain projects. Here are the unit test project options.
 
 ```
-PS C:\dotnetCLI\person-api> dotnet new list
+PS C:\dotnetCLI\person-api> dotnet new list --tag "Test"
 These templates matched your input:
 
 Template Name            Short Name    Tags
@@ -717,7 +717,17 @@ public void GetPeople_ReturnsAllItems()
 }
 ```
 
-(You will need to bring in some using statements, but I'll assume that you are used to doing that now.)
+You will notice that "Get" has squigglies under it. If you hover over it, it says that there is a missing reference to one of the Microsoft assemblies. You can fix this by forcing the references to update automatically.
+
+Back at the command line, use "dotnet restore".
+
+```
+PS C:\dotnetCLI\person-api-tests> dotnet test
+  Determining projects to restore...
+  ...
+```
+
+When you go back to Visual Studio Code, you will notice that the squigglies are gone.  
 
 Back at the command prompt, we'll run our new test.
 
@@ -751,10 +761,10 @@ public void GetPerson_WithValidId_ReturnsPerson()
 }
 
 [Test]
-public void GetPerson_WithInvaliId_ReturnsNull()
+public void GetPerson_WithInvalidId_ReturnsNull()
 {
     Person? actual = controller.Get(-10);
-    Assert.That(actual, Is.Null);
+    Assert.IsNull(actual);
 }
 ```
 
@@ -944,15 +954,6 @@ namespace person_console;
 public class PersonReader
 {
     
-}
-```
-
-Add a field of type "HttpClient".
-
-```csharp
-public class PersonReader
-{
-    private HttpClient client = new();
 }
 ```
 

@@ -29,9 +29,9 @@ public class PeopleControllerTests
     }
 
     [Test]
-    public void GetPerson_WithInvaliId_ReturnsNull()
+    public void GetPerson_WithInvalidId_ReturnsNull()
     {
         Person? actual = controller.Get(-10);
-        Assert.That(actual, Is.Null);
+        Assert.IsNull(actual);
     }
 }
